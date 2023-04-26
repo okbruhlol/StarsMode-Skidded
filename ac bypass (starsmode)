@@ -1,0 +1,31 @@
+task.defer(function()
+   while wait() do
+       pcall(function()
+           workspace.CurrentRooms["0"].StarterElevator.DoorHitbox:Destroy()
+       end)
+   end
+end)
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Disabled = true
+
+function thisGUY()
+    local plrChar = game.Players.LocalPlayer.Character:GetDescendants()
+    for _, anchor in ipairs(plrChar) do
+        if anchor:IsA("BasePart") and ("MeshPart") then
+            anchor.Anchored = false
+        end
+    end
+end
+
+local yesfigure = false
+
+local thatRoom = game.Workspace:WaitForChild("CurrentRooms")
+
+while not yesfigure do
+    local figure = thatRoom:FindFirstChild("49")
+    if figure then
+        yesfigure = true
+        thisGUY()
+    end
+    wait(1)
+end
