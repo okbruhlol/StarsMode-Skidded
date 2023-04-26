@@ -4,7 +4,7 @@ local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 Achievements.Get({
     Title = "This is just the beginning",
     Desc = "...",
-    Reason = 'Executed Star Mode In Game',
+    Reason = 'Executed Star Mode In Game (Forked and skidded by okayy#3051)',
     Image = "https://qph.cf2.quoracdn.net/main-qimg-74971626a636d78097db14b505f32b6a-pjlq",
 })
 
